@@ -1,0 +1,94 @@
+.card {
+  width: 300px;
+  height: 155px;
+  border: 3px solid black;
+  border-radius: 10px;
+  transition: transform 0.8s;
+  -webkit-animation: flip_360 0.5s linear reverse both;
+  animation: flip_360 0.5s linear reverse both;
+  margin-top: 18.5px;
+  padding: 10px 10px 2px;
+  background-color: white;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 1.7px black;
+  text-align: center;
+  color: rgb(255, 226, 65);
+
+  &__info {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image-container {
+    width: 100%;
+    height: 70%;
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__button {
+    margin-bottom: 3px;
+    cursor: pointer;
+  }
+
+  &__button-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .flip-button {
+    width: 27px;
+    height: 27px;
+    margin-right: 5px;
+  }
+}
+  
+.disabled_card {
+  pointer-events: none;
+  cursor: none;
+  filter: grayscale(100%);
+}
+  
+.card_rotated {
+  -webkit-animation: flip_180 0.5s linear both;
+  animation: flip_180 0.5s linear both;
+}
+  
+@keyframes flip_180 {
+    0% {
+      -webkit-transform: scale(1) rotate3d(1, 1, 0, 0deg);
+      transform: scale(1) rotate3d(1, 1, 0, 0deg);
+    }
+    50% {
+      -webkit-transform: scale(2.5) rotate3d(1, 1, 0, 90deg);
+      transform: scale(2.5) rotate3d(1, 1, 0, 90deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotate3d(1, 1, 0, 180deg);
+      transform: scale(1) rotate3d(1, 1, 0, 360deg);
+    }
+}
+  
+  
+@keyframes flip_360 {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(180deg);
+  }
+}

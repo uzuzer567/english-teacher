@@ -1,0 +1,5 @@
+<div class="card-list">
+    <div *ngFor="let card of cardList">
+        <app-card [card]="card" [isCategory]="!!card?.word"></app-card>
+    </div>
+</div>
