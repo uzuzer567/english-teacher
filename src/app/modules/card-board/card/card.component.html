@@ -1,16 +1,16 @@
-<div class="card">
+<div class="card" #cardElement (click)="onTranslate($event)">
   <div class="card__info">
     <div class="card__image-container">
       <img src="{{card.imageSrc}}" alt="card" class="card__image">
     </div>
-    <span>{{card.word}}</span>
+    <span>{{cardDescription}}</span>
   </div>
   <div class="card__buttons">
-    <div class="card__button">
+    <div class="card__button" *ngIf="currentMode === mode.training" (click)="onPlayAudio()">
       <img src="assets/images/sound.png" alt="icon" class="card__button-icon">
     </div>
-    <div class="card__button">
-      <img src="assets/images/flip.png" alt="icon" class="card__button-icon flip-button">
+    <div class="card__button" *ngIf="currentMode === mode.game">
+      <img src="assets/images/check.png" alt="icon" class="card__button-icon">
     </div>
   </div>
 </div>
