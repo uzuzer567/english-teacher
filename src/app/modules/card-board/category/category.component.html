@@ -1,0 +1,10 @@
+<div (click)="onSelect()">
+  <div class="category" #categoryElement>
+    <div class="category__info">
+      <div class="category__image-container">
+        <img src="assets/images/{{category.name.toLowerCase()}}.png" alt="category" class="category__image">
+      </div>
+      <span>{{category.name.toLowerCase()}}</span>
+    </div>
+  </div>
+</div>

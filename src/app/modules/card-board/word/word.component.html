@@ -1,12 +1,12 @@
 <div class="card" #cardElement (click)="onTranslate($event)">
   <div class="card__info">
     <div class="card__image-container">
-      <img src="{{card.imageSrc}}" alt="card" class="card__image">
+      <img src="{{word.imageSrc}}" alt="card" class="card__image">
     </div>
     <span>{{cardDescription}}</span>
   </div>
   <div class="card__buttons">
-    <div class="card__button" *ngIf="currentMode === mode.training" (click)="onPlayAudio()">
+    <div class="card__button" *ngIf="currentMode === mode.training" (click)="onPlayAudio($event)">
       <img src="assets/images/sound.png" alt="icon" class="card__button-icon">
     </div>
     <div class="card__button" *ngIf="currentMode === mode.game">

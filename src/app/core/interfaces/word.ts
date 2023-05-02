@@ -1,4 +1,4 @@
-export interface Card {
+export interface Word {
   word: string;
   translation: string;
   imageSrc: string;

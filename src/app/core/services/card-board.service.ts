@@ -7,4 +7,5 @@ import { Mode } from '../enums/mode';
 })
 export class CardBoardService {
   activeMode$ = new BehaviorSubject<Mode>(Mode.training);
+  isGameStarted$ = new BehaviorSubject<boolean>(false);
 }

@@ -1,3 +1,9 @@
 <div class="header">
     <app-toggle-mode-button></app-toggle-mode-button>
+    <div class="header__button" data-title="start game" *ngIf="currentMode === Mode.game && !isGameStarted" (click)="onStartGame()">
+        <img src="assets/images/play.png" alt="icon" class="header__button-icon">
+    </div>
+    <div class="header__button" data-title="repeat audio" *ngIf="currentMode === Mode.game && isGameStarted">
+        <img src="assets/images/flip.png" alt="icon" class="header__button-icon">
+    </div>
 </div>

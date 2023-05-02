@@ -1,10 +1,10 @@
-export enum CardCategory {
+export enum WordCategory {
   animals = 'Animals',
   body = 'Body',
   clothes = 'Clothes',
-  emotions = 'Emotions',
+  supplies = 'Supplies',
   fruits = 'Fruits',
   vegetables = 'Vegetables',
   nature = 'Nature',
-  homeStuff = 'Home stuff',
+  home = 'Home',
 }

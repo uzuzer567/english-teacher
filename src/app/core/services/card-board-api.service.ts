@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Card } from '../interfaces/card';
-import { CardCategory } from '../enums/card-category';
+import { Word } from '../interfaces/word';
+import { WordCategory } from '../enums/word-category';
 import { Observable, of } from 'rxjs';
+import { Category } from '../interfaces/category';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CardBoardApiService {
-  animals: Card[] = [
+  animals: Word[] = [
     {
       word: 'camel',
       translation: 'верблюд',
@@ -81,7 +82,7 @@ export class CardBoardApiService {
       audioSrc: 'assets/audio/turtle.mp3',
     },
   ];
-  body: Card[] = [
+  body: Word[] = [
     {
       word: 'back',
       translation: 'спина',
@@ -155,7 +156,7 @@ export class CardBoardApiService {
       audioSrc: 'assets/audio/tongue.mp3',
     },
   ];
-  clothes: Card[] = [
+  clothes: Word[] = [
     {
       word: 'coat',
       translation: 'пальто',
@@ -229,81 +230,81 @@ export class CardBoardApiService {
       audioSrc: 'assets/audio/swimsuit.mp3',
     },
   ];
-  emotions: Card[] = [
+  supplies: Word[] = [
     {
-      word: 'angry',
-      translation: 'злой',
-      imageSrc: 'assets/images/angry.png',
-      audioSrc: 'assets/audio/angry.mp3',
+      word: 'pen',
+      translation: 'ручка',
+      imageSrc: 'assets/images/pen.png',
+      audioSrc: 'assets/audio/pen.mp3',
     },
     {
-      word: 'bored',
-      translation: 'скучающий',
-      imageSrc: 'assets/images/bored.png',
-      audioSrc: 'assets/audio/bored.mp3',
+      word: 'pencil',
+      translation: 'карандаш',
+      imageSrc: 'assets/images/pencil.png',
+      audioSrc: 'assets/audio/pencil.mp3',
     },
     {
-      word: 'cool',
-      translation: 'классный',
-      imageSrc: 'assets/images/cool.png',
-      audioSrc: 'assets/audio/cool.mp3',
+      word: 'scissors',
+      translation: 'ножницы',
+      imageSrc: 'assets/images/scissors.png',
+      audioSrc: 'assets/audio/scissors.mp3',
     },
     {
-      word: 'crying',
-      translation: 'плачущий',
-      imageSrc: 'assets/images/crying.png',
-      audioSrc: 'assets/audio/crying.mp3',
+      word: 'ruler',
+      translation: 'линейка',
+      imageSrc: 'assets/images/ruler.png',
+      audioSrc: 'assets/audio/ruler.mp3',
     },
     {
-      word: 'excited',
-      translation: 'в шоке',
-      imageSrc: 'assets/images/excited.png',
-      audioSrc: 'assets/audio/excited.mp3',
+      word: 'sharpener',
+      translation: 'точилка',
+      imageSrc: 'assets/images/sharpener.png',
+      audioSrc: 'assets/audio/sharpener.mp3',
     },
     {
-      word: 'greedy',
-      translation: 'жадный',
-      imageSrc: 'assets/images/greedy.png',
-      audioSrc: 'assets/audio/greedy.mp3',
+      word: 'eraser',
+      translation: 'ластик',
+      imageSrc: 'assets/images/eraser.png',
+      audioSrc: 'assets/audio/eraser.mp3',
     },
     {
-      word: 'in love',
-      translation: 'влюбленный',
-      imageSrc: 'assets/images/in_love.png',
-      audioSrc: 'assets/audio/in_love.mp3',
+      word: 'glue',
+      translation: 'клей',
+      imageSrc: 'assets/images/glue.png',
+      audioSrc: 'assets/audio/glue.mp3',
     },
     {
-      word: 'sad',
-      translation: 'грустный',
-      imageSrc: 'assets/images/sad.png',
-      audioSrc: 'assets/audio/sad.mp3',
+      word: 'book',
+      translation: 'книга',
+      imageSrc: 'assets/images/book.png',
+      audioSrc: 'assets/audio/book.mp3',
     },
     {
-      word: 'scared',
-      translation: 'испуганный',
-      imageSrc: 'assets/images/scared.png',
-      audioSrc: 'assets/audio/scared.mp3',
+      word: 'notebook',
+      translation: 'тетрадь',
+      imageSrc: 'assets/images/notebook.png',
+      audioSrc: 'assets/audio/notebook.mp3',
     },
     {
-      word: 'screaming',
-      translation: 'кричащий',
-      imageSrc: 'assets/images/screaming.png',
-      audioSrc: 'assets/audio/screaming.mp3',
+      word: 'brush',
+      translation: 'кисть',
+      imageSrc: 'assets/images/brush.png',
+      audioSrc: 'assets/audio/brush.mp3',
     },
     {
-      word: 'shocked',
-      translation: 'в шоке',
-      imageSrc: 'assets/images/shocked.png',
-      audioSrc: 'assets/audio/shocked.mp3',
+      word: 'paints',
+      translation: 'краски',
+      imageSrc: 'assets/images/paints.png',
+      audioSrc: 'assets/audio/paints.mp3',
     },
     {
-      word: 'smiling',
-      translation: 'улыбающийся',
-      imageSrc: 'assets/images/smiling.png',
-      audioSrc: 'assets/audio/smiling.mp3',
+      word: 'album',
+      translation: 'альбом',
+      imageSrc: 'assets/images/album.png',
+      audioSrc: 'assets/audio/album.mp3',
     },
   ];
-  fruits: Card[] = [
+  fruits: Word[] = [
     {
       word: 'apple',
       translation: 'яблоко',
@@ -377,7 +378,7 @@ export class CardBoardApiService {
       audioSrc: 'assets/audio/watermelon.mp3',
     },
   ];
-  vegetables: Card[] = [
+  vegetables: Word[] = [
     {
       word: 'beet',
       translation: 'свекла',
@@ -451,7 +452,7 @@ export class CardBoardApiService {
       audioSrc: 'assets/audio/tomato.mp3',
     },
   ];
-  nature: Card[] = [
+  nature: Word[] = [
     {
       word: 'cloud',
       translation: 'облако',
@@ -525,7 +526,7 @@ export class CardBoardApiService {
       audioSrc: 'assets/audio/wind.mp3',
     },
   ];
-  homeStuff: Card[] = [
+  home: Word[] = [
     {
       word: 'bathtub',
       translation: 'ванна',
@@ -600,18 +601,57 @@ export class CardBoardApiService {
     },
   ];
 
-  categories = {
-    [CardCategory.animals]: this.animals,
-    [CardCategory.body]: this.body,
-    [CardCategory.clothes]: this.clothes,
-    [CardCategory.emotions]: this.emotions,
-    [CardCategory.fruits]: this.fruits,
-    [CardCategory.homeStuff]: this.homeStuff,
-    [CardCategory.nature]: this.nature,
-    [CardCategory.vegetables]: this.vegetables,
+  categories: Category[] = [
+    {
+      name: WordCategory.animals,
+      id: '1',
+    },
+    {
+      name: WordCategory.body,
+      id: '2',
+    },
+    {
+      name: WordCategory.clothes,
+      id: '3',
+    },
+    {
+      name: WordCategory.supplies,
+      id: '4',
+    },
+    {
+      name: WordCategory.fruits,
+      id: '5',
+    },
+    {
+      name: WordCategory.home,
+      id: '6',
+    },
+    {
+      name: WordCategory.nature,
+      id: '7',
+    },
+    {
+      name: WordCategory.vegetables,
+      id: '8',
+    },
+  ];
+
+  words = {
+    [WordCategory.animals]: this.animals,
+    [WordCategory.body]: this.body,
+    [WordCategory.clothes]: this.clothes,
+    [WordCategory.supplies]: this.supplies,
+    [WordCategory.fruits]: this.fruits,
+    [WordCategory.home]: this.home,
+    [WordCategory.nature]: this.nature,
+    [WordCategory.vegetables]: this.vegetables,
   };
 
-  getCategoryCards(category: CardCategory): Observable<Card[]> {
-    return of(this.categories[category]);
+  getWordCategories(): Observable<Category[]> {
+    return of(this.categories);
+  }
+
+  getCategoryWords(category: WordCategory): Observable<Word[]> {
+    return of(this.words[category]);
   }
 }
